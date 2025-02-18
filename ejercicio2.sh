@@ -1,23 +1,23 @@
 #!/bin/bash
 
-read -p "Introduce el número a adivinar: " numero_adivinar
+read -p "Dame un numero: " numero_adivinar
 
 if [[ -z "$numero_adivinar" ]]; then
-    echo "Debes introducir un número válido."
+    echo "Dame un numero válido"
     exit 1
 fi
 
 while true; do
-    read -p "Intenta adivinar el número: " intento
+    read -p "Intenta adivinar el numero: " intento
 
     if [[ -z "$intento" ]]; then
-        echo "Debes introducir un número."
+        echo "Debes introducir un numero."
     elif (( intento == numero_adivinar )); then
-        echo "¡Felicidades! Has adivinado el número."
+        echo "adivinaste el numero!"
         break
     elif (( intento < numero_adivinar )); then
-        echo "El número es mayor."
+        echo "El numero es mayor"
     else
-        echo "El número es menor."
+        echo "El numero es menor"
     fi
 done
