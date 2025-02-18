@@ -2,11 +2,6 @@
 
 read -p "Dame un numero: " numero_adivinar
 
-if [[ -z "$numero_adivinar" ]]; then
-    echo "Dame un numero válido"
-    exit 1
-fi
-
 while true; do
     read -p "Intenta adivinar el numero: " intento
 
